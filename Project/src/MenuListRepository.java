@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MenuListRepository {
-    List<MenuListDTO> menuList = new ArrayList<>(); // 메뉴 리스트
+    static List<MenuListDTO> menuList = new ArrayList<>(); // 메뉴 리스트
 
     public void save(MenuListDTO list) {
         menuList.add(list);
@@ -45,5 +45,16 @@ public class MenuListRepository {
             }
 
         }
+    }
+
+
+    public List<MenuListDTO> findByName(String mn) {
+        List<MenuListDTO> list = new ArrayList<>();
+        for (int i=0; i< menuList.size();i++){
+            if (mn.equals(menuList.get(i).getFoodName())) {
+                list.add(menuList.get(i));
+            }
+        }
+        return list;
     }
 }

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RestaurantRepository {
-    List<RestaurantDTO> restaurantList = new ArrayList<>(); // 식당리스트
+   static List<RestaurantDTO> restaurantList = new ArrayList<>(); // 식당리스트
 
     public void restaurantList(RestaurantDTO list) {
         restaurantList.add(list);
@@ -25,5 +25,17 @@ public class RestaurantRepository {
 
     public void remove(RestaurantDTO restaurantNameResult) {
         restaurantList.remove(restaurantNameResult);
+    }
+
+    public List<RestaurantDTO> findByname(List<MenuListDTO> mnpass) {
+        List<RestaurantDTO> list = new ArrayList<>();
+        for (int i = 0; i<restaurantList.size();i++){
+            for (int j = 0; j < mnpass.size(); j++) {
+                if (mnpass.get(j).getRestaurantName().equals(restaurantList.get(i).getRestaurantName())) {
+                    list.add(restaurantList.get(i));
+                }
+            }
+        }
+        return list;
     }
 }

@@ -48,11 +48,6 @@ public class MenuListDTO {
 
     @Override
     public String toString() {
-        return "MenuListDTO{" +
-                "Id=" + Id +
-                ", RestaurantName='" + RestaurantName + '\'' +
-                ", FoodName='" + FoodName + '\'' +
-                ", FoodPrice=" + FoodPrice +
-                '}';
+        return " | 메뉴관리번호 : " + Id + " | 식당이름 : " + RestaurantName + " | FoodName : " + FoodName + " | FoodPrice : " + FoodPrice;
     }
 }

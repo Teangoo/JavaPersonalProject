@@ -68,13 +68,11 @@ public class ReviewDTO {
 
     @Override
     public String toString() {
-        return "ReviewDTO{" +
-                "Id=" + Id +
-                ", RestaurantName='" + RestaurantName + '\'' +
-                ", MenuName='" + MenuName + '\'' +
-                ", MemberNickName='" + MemberNickName + '\'' +
-                ", ReviewContents='" + ReviewContents + '\'' +
-                ", ReviewScore=" + ReviewScore +
-                '}';
+        return  " | Id : " + Id +
+                " | RestaurantName : " + RestaurantName +
+                " | MenuName : " + MenuName +
+                " | MemberNickName : " + MemberNickName +
+                " | ReviewContents : " + ReviewContents +
+                " | ReviewScore : " + ReviewScore;
     }
 }

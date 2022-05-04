@@ -68,13 +68,6 @@ public class MemberDTO {
 
     @Override
     public String toString() {
-        return "MemberDTO{" +
-                "Id=" + Id +
-                ", MemberId='" + MemberId + '\'' +
-                ", MemberPassword='" + MemberPassword + '\'' +
-                ", MemberName='" + MemberName + '\'' +
-                ", MemberMobile='" + MemberMobile + '\'' +
-                ", MemberNickName='" + MemberNickName + '\'' +
-                '}';
+        return " | Id : " + Id + " | MemberId : " + MemberId  + " | MemberPassword : " + MemberPassword  + " | MemberName : " + MemberName  + " | MemberMobile : " + MemberMobile  + " | MemberNickName : " + MemberNickName;
     }
 }
