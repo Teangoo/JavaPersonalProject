@@ -2,20 +2,28 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RestaurantRepository {
-    List<RestaurantDTO> rrlist = new ArrayList<>();
+    List<RestaurantDTO> restaurantList = new ArrayList<>(); // 식당리스트
 
     public void restaurantList(RestaurantDTO list) {
-        rrlist.add(list);
+        restaurantList.add(list);
     }
 
 
-    public boolean findById(String restaurantname) {
-    boolean pass = false;
-    for (int i = 0; i<rrlist.size();i++){
-        if(restaurantname.equals(rrlist.get(i).getRestaurangName())){
-            pass = true;
+    public RestaurantDTO findById(String restaurantname) {
+        RestaurantDTO pass = null;
+    for (int i = 0; i<restaurantList.size();i++){
+        if(restaurantname.equals(restaurantList.get(i).getRestaurantName())){
+            pass = restaurantList.get(i);
         }
     }
     return pass;
+    }
+
+    public List<RestaurantDTO> findAll() {
+        return restaurantList;
+    }
+
+    public void remove(RestaurantDTO restaurantNameResult) {
+        restaurantList.remove(restaurantNameResult);
     }
 }

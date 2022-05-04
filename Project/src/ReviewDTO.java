@@ -1,17 +1,19 @@
 public class ReviewDTO {
     private Long Id;//리뷰관리번호
-    private String ReviewWrite;//리뷰작성자
-    private Long WritePwd; //리뷰작성자비밀번호
+    private String RestaurantName;//가게이름
+    private String MenuName;//리뷰작성한 메뉴이름
+    private String MemberNickName;//리뷰작성자
     private String ReviewContents; //리뷰내용
     private int ReviewScore; //평점
 
     public ReviewDTO() {
     }
 
-    public ReviewDTO(Long id, String reviewWrite, Long writePwd, String reviewContents, int reviewScore) {
+    public ReviewDTO(Long id, String restaurantName, String menuName, String memberNickName, String reviewContents, int reviewScore) {
         Id = id;
-        ReviewWrite = reviewWrite;
-        WritePwd = writePwd;
+        RestaurantName = restaurantName;
+        MenuName = menuName;
+        MemberNickName = memberNickName;
         ReviewContents = reviewContents;
         ReviewScore = reviewScore;
     }
@@ -24,20 +26,28 @@ public class ReviewDTO {
         Id = id;
     }
 
-    public String getReviewWrite() {
-        return ReviewWrite;
+    public String getRestaurantName() {
+        return RestaurantName;
     }
 
-    public void setReviewWrite(String reviewWrite) {
-        ReviewWrite = reviewWrite;
+    public void setRestaurantName(String restaurantName) {
+        RestaurantName = restaurantName;
     }
 
-    public Long getWritePwd() {
-        return WritePwd;
+    public String getMenuName() {
+        return MenuName;
     }
 
-    public void setWritePwd(Long writePwd) {
-        WritePwd = writePwd;
+    public void setMenuName(String menuName) {
+        MenuName = menuName;
+    }
+
+    public String getMemberNickName() {
+        return MemberNickName;
+    }
+
+    public void setMemberNickName(String memberNickName) {
+        MemberNickName = memberNickName;
     }
 
     public String getReviewContents() {
@@ -51,6 +61,7 @@ public class ReviewDTO {
     public int getReviewScore() {
         return ReviewScore;
     }
+
     public void setReviewScore(int reviewScore) {
         ReviewScore = reviewScore;
     }
@@ -59,8 +70,9 @@ public class ReviewDTO {
     public String toString() {
         return "ReviewDTO{" +
                 "Id=" + Id +
-                ", ReviewWrite='" + ReviewWrite + '\'' +
-                ", WritePwd=" + WritePwd +
+                ", RestaurantName='" + RestaurantName + '\'' +
+                ", MenuName='" + MenuName + '\'' +
+                ", MemberNickName='" + MemberNickName + '\'' +
                 ", ReviewContents='" + ReviewContents + '\'' +
                 ", ReviewScore=" + ReviewScore +
                 '}';

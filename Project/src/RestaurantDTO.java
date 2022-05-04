@@ -1,18 +1,18 @@
 public class RestaurantDTO {
     private Long Id; //식당 관리번호
-    private String RestaurangName; //식당이름
-    private String RestaurangAddress; //식당주소
-    private String RestaurangPhoneNumber; //식당전화번호
+    private String RestaurantName; //식당이름
+    private String RestaurantAddress; //식당주소
+    private String RestaurantPhoneNumber; //식당전화번호
     private int RestautangDistance; //인천일보아카데미와 식당의 거리
 
     public RestaurantDTO() {
     }
 
-    public RestaurantDTO(Long id, String restaurangName, String restaurangAddress, String restaurangPhoneNumber, int restautangDistance) {
+    public RestaurantDTO(Long id, String RestaurantName, String RestaurantAddress, String RestaurantPhoneNumber, int restautangDistance) {
         Id = id;
-        RestaurangName = restaurangName;
-        RestaurangAddress = restaurangAddress;
-        RestaurangPhoneNumber = restaurangPhoneNumber;
+        RestaurantName = RestaurantName;
+        RestaurantAddress = RestaurantAddress;
+        RestaurantPhoneNumber = RestaurantPhoneNumber;
         RestautangDistance = restautangDistance;
     }
 
@@ -24,28 +24,28 @@ public class RestaurantDTO {
         Id = id;
     }
 
-    public String getRestaurangName() {
-        return RestaurangName;
+    public String getRestaurantName() {
+        return RestaurantName;
     }
 
-    public void setRestaurangName(String restaurangName) {
-        RestaurangName = restaurangName;
+    public void setRestaurantName(String RestaurantName) {
+        RestaurantName = RestaurantName;
     }
 
-    public String getRestaurangAddress() {
-        return RestaurangAddress;
+    public String getRestaurantAddress() {
+        return RestaurantAddress;
     }
 
-    public void setRestaurangAddress(String restaurangAddress) {
-        RestaurangAddress = restaurangAddress;
+    public void setRestaurantAddress(String RestaurantAddress) {
+        RestaurantAddress = RestaurantAddress;
     }
 
-    public String getRestaurangPhoneNumber() {
-        return RestaurangPhoneNumber;
+    public String getRestaurantPhoneNumber() {
+        return RestaurantPhoneNumber;
     }
 
-    public void setRestaurangPhoneNumber(String restaurangPhoneNumber) {
-        RestaurangPhoneNumber = restaurangPhoneNumber;
+    public void setRestaurantPhoneNumber(String RestaurantPhoneNumber) {
+        RestaurantPhoneNumber = RestaurantPhoneNumber;
     }
 
     public int getRestautangDistance() {
@@ -58,12 +58,12 @@ public class RestaurantDTO {
 
     @Override
     public String toString() {
-        return "RestaurantDTO{" +
+        return "식당목록{" +
                 "Id=" + Id +
-                ", RestaurangName='" + RestaurangName + '\'' +
-                ", RestaurangAddress='" + RestaurangAddress + '\'' +
-                ", RestaurangPhoneNumber='" + RestaurangPhoneNumber + '\'' +
-                ", RestautangDistance='" + RestautangDistance + '\'' +
+                ", 식당이름 : '" + RestaurantName + '\'' +
+                ", 주소 : '" + RestaurantAddress + '\'' +
+                ", 전화번호 : '" + RestaurantPhoneNumber + '\'' +
+                ", 거리 : '" + RestautangDistance+"KM" + '\'' +
                 '}';
     }
 }
