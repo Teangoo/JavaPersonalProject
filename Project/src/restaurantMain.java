@@ -38,7 +38,8 @@ public class restaurantMain {
                     //식당 음식 예약 주문
 
                 } else if (selectnumber == 6) {
-                    //회원 가입
+                    //회원 가입 / 탈퇴 /
+                    restaurantService.memsave();
 
                 } else if (selectnumber == 7) {
                     //서비스 종료

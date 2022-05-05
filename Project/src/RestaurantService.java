@@ -5,6 +5,7 @@ public class RestaurantService {
     RestaurantRepository restaurantrepository = new RestaurantRepository();
     ReviewRepository reviewrepository = new ReviewRepository();
     MenuListRepository menuListRepository = new MenuListRepository();
+    MemberService memberServer = new MemberService();
     Scanner scan = new Scanner(System.in);
 
     public void restaurantlist() {
@@ -57,5 +58,24 @@ public class RestaurantService {
         System.out.println("이용하실 서비스를 선택해주세요.");
         System.out.println("1: 가게 리뷰 확인 2: 리뷰 작성 3: 리뷰 삭제 4: 종료 ");
         System.out.println(" > ");
+    }
+
+    public void memsave() {
+        System.out.println("회원가입 및 회원 탈퇴서비스 입니다.");
+        System.out.println("1: 회원가입 | 2:회원탈퇴 | 3: 종료");
+        int input = scan.nextInt();
+        boolean run = true;
+        while (run) {
+            if (input == 1) {
+                // 회원가입
+                memberServer.save();
+
+            } else if (input == 2) {
+                //회원탈퇴
+
+            } else if (input == 3) {
+                run = false;
+            }
+        }
     }
 }
