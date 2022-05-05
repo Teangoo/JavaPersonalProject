@@ -50,4 +50,12 @@ public class RestaurantService {
                 System.out.println("검색하신 음식을 파는 가게가 없습니다.");
             }
     }
+
+    public void review() {
+
+        System.out.println("리뷰 서비스입니다.");
+        System.out.println("이용하실 서비스를 선택해주세요.");
+        System.out.println("1: 가게 리뷰 확인 2: 리뷰 작성 3: 리뷰 삭제 4: 종료 ");
+        System.out.println(" > ");
+    }
 }
