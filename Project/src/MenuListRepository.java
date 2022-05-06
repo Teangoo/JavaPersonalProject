@@ -57,4 +57,14 @@ public class MenuListRepository {
         }
         return list;
     }
+
+    public boolean namepass(String name, String foodname) {
+        boolean pass = false;
+        for (int i = 0; i < menuList.size(); i++) {
+            if(name.equals(menuList.get(i).getRestaurantName()) && foodname.equals(menuList.get(i).getFoodName())){
+                pass = true;
+            }
+        }
+        return pass;
+    }
 }
