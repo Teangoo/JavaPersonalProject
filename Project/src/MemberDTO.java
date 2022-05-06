@@ -68,6 +68,6 @@ public class MemberDTO {
 
     @Override
     public String toString() {
-        return " | Id : " + Id + " | MemberId : " + MemberId  + " | MemberPassword : " + MemberPassword  + " | MemberName : " + MemberName  + " | MemberMobile : " + MemberMobile  + " | MemberNickName : " + MemberNickName;
+        return " | 관리번호 : " + Id + " | 회원아이디 : " + MemberId  + " | 회원비밀번호 : " + MemberPassword  + " | 회원이름 : " + MemberName  + " | 회원전화번호 : " + MemberMobile  + " | 회원닉네임 : " + MemberNickName;
     }
 }

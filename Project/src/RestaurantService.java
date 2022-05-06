@@ -71,12 +71,12 @@ public class RestaurantService {
                 RestaurantDTO pass = restaurantrepository.findById(name);
                 if(pass != null) {
                     List<ReviewDTO> list = reviewrepository.reviewAll(name);
-                    System.out.println("입력하신 가게에 리뷰는 다음과 같습니다.");
-                    for (int i = 0; i < list.size(); i++) {
-                        System.out.println(list.get(i));
-                    }
-                    int avgScore = reviewrepository.avgScore(list);
-                    System.out.println("가게에 대한 평점은 : "+ avgScore +"입니다.");
+                        System.out.println("입력하신 가게에 리뷰는 다음과 같습니다.");
+                        for (int i = 0; i < list.size(); i++) {
+                            System.out.println(list.get(i));
+                        }
+                        int avgScore = reviewrepository.avgScore(list);
+                        System.out.println("가게에 대한 평점은 : " + avgScore + "입니다.");
 
                 }else{
                     System.out.println("입력하신 가게와 일치하는 가게가 없습니다.");
@@ -141,7 +141,7 @@ public class RestaurantService {
                 System.out.print(" > ");
                 String id = scan.nextLine();
                 System.out.println("비밀번호를 입력하세요.");
-                System.out.println(" > ");
+                System.out.print(" > ");
                 String pwd = scan.nextLine();
 
                 boolean idpwdpass = memberRepository.idpwdpass(id,pwd);
@@ -156,11 +156,12 @@ public class RestaurantService {
                     boolean delrun = true;
                     while (delrun) {
                         System.out.println("삭제하실 리뷰의 관리번호를 입력하세요.");
-                        System.out.println(" > ");
+                        System.out.print(" > ");
                         Long delid = scan.nextLong();scan.nextLine();
                         reviewrepository.delete(delid);
                         System.out.println("삭제되었습니다.");
                         System.out.println("리뷰를 더 삭제하시려면 1번을 메인메뉴로 돌아가시려면 2번을 입력하세요.");
+                        System.out.print(" > ");
                         int selectdel = scan.nextInt();scan.nextLine();
                         if (selectdel==2){
                             delrun = false;

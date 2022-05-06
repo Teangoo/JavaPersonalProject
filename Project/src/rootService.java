@@ -193,6 +193,7 @@ public class rootService {
                             boolean delrun = true;
                             while(delrun) {
                                 System.out.println("리스트중 삭제하실 리뷰의 관리번호를 입력하세요.");
+                                System.out.print(" > ");
                                 Long delreview = scan.nextLong();
                                 scan.nextLine();
                                 reviewrepository.delete(delreview);
@@ -241,6 +242,7 @@ public class rootService {
                         }else if(input == 3){
                             //특정 가게의 리뷰삭제
                             System.out.println("가게의 이름을 입력하세요.");
+                            System.out.print(" > ");
                             String restaurantname = scan.nextLine();
                             RestaurantDTO pass = restaurantrepository.findById(restaurantname);
                             if(pass != null){
@@ -252,6 +254,7 @@ public class rootService {
                                 boolean delrun = true;
                                 while (delrun) {
                                     System.out.println("삭제하고 싶은 리뷰의 관리번호를 입력하세요.");
+                                    System.out.print(" > ");
                                     Long delreview = scan.nextLong();
                                     scan.nextLine();
                                     reviewrepository.delete(delreview);
@@ -278,8 +281,8 @@ public class rootService {
                         if(pass == rootpwd){
                             System.out.println("변경하실 비밀번호를 입력하세요");
                             System.out.print(" > ");
-                            int passre
-                            rootpwd = pass;
+                            int passResult = scan.nextInt();scan.nextLine();
+                            rootpwd = passResult;
                             System.out.println("비밀번호 변경이 완료되었습니다.");
                         }else {
                             System.out.println("비밀번호가 틀립니다.");

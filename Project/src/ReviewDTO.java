@@ -68,11 +68,11 @@ public class ReviewDTO {
 
     @Override
     public String toString() {
-        return  " | Id : " + Id +
-                " | RestaurantName : " + RestaurantName +
-                " | MenuName : " + MenuName +
-                " | MemberNickName : " + MemberNickName +
-                " | ReviewContents : " + ReviewContents +
-                " | ReviewScore : " + ReviewScore;
+        return  " | 리뷰관리번호 : " + Id +
+                " | 식당이름 : " + RestaurantName +
+                " | 메뉴이름 : " + MenuName +
+                " | 회원닉네임 : " + MemberNickName +
+                " | 리뷰내용 : " + ReviewContents +
+                " | 평점 : " + ReviewScore;
     }
 }
